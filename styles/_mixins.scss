@@ -1,0 +1,5 @@
+@mixin fontRegular($fz, $fw, $lh) {
+  font-size: $fz;
+  font-weight: $fw;
+  line-height: calc($lh / $fz);
+}

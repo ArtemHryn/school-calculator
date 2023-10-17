@@ -1,0 +1,185 @@
+@import "/styles/main.scss";
+
+.footer {
+  border-top: 2px solid $border_line;
+  @media screen and (min-width: $min_tablet) {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+
+//contacts
+.contact_wrapper {
+  flex: 2;
+  @media screen and (min-width: $min_desktop) {
+    max-width: 551px;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 0 auto;
+  max-width: $min_mobile;
+  padding: 72px 24px 40px;
+  @media screen and (min-width: $min_tablet) {
+    max-width: 100%;
+    width: 321px;
+    padding: 76px 28px 60px;
+    margin: 0 auto 0 0;
+  }
+  @media screen and (min-width: $min_desktop) {
+    width: 100%;
+    padding: 79px 31px 57px;
+    border-right: 2px solid $border_line;
+  }
+}
+
+.title {
+  @include fontRegular(16px, 400, 20px);
+  letter-spacing: 0.01em;
+  @media screen and (min-width: $min_tablet) {
+    @include fontRegular(16px, 400, 20px);
+  }
+}
+
+.social_link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 149px;
+  height: 40px;
+  padding: 8px 28px;
+  border-radius: 100px;
+  border: 2px solid $border_line;
+
+  @include fontRegular(20px, 400, 40px);
+  letter-spacing: 0.012em;
+
+  @media screen and (min-width: $min_tablet) {
+    @include fontRegular(32px, 400, 40px);
+    letter-spacing: 0.02em;
+    width: 204px;
+    height: 56px;
+  }
+}
+
+//offer
+
+.offer_wrapper {
+  background-color: $footer-bg;
+  border-top: 2px solid $border_line;
+  flex: 3;
+  @media screen and (min-width: $min_tablet) {
+    background-color: #86501e;
+    border-right: 2px solid $border_line;
+    border-top: none;
+  }
+  @media screen and (min-width: $min_desktop) {
+    flex: 2;
+  }
+}
+
+.offer_container {
+  margin: 0 auto;
+  max-width: $min_mobile;
+  padding: 24px;
+  @media screen and (min-width: $min_tablet) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 100%;
+    width: 447px;
+    padding: 48px 28px;
+    margin: 0 0 0 auto;
+  }
+  @media screen and (min-width: $min_desktop) {
+    width: 540px;
+    padding: 48px 31px;
+  }
+}
+
+.author {
+  display: block;
+  @include fontRegular(32px, 700, 40px);
+  color: $main_button_color;
+  margin-bottom: 72px;
+  @media screen and (min-width: $min_tablet) {
+    @include fontRegular(40px, 700, 52px);
+    letter-spacing: 0.4px;
+  }
+  @media screen and (min-width: $min_desktop) {
+    @include fontRegular(48px, 700, 52px);
+  }
+}
+
+.politic_box {
+  @media screen and (min-width: $min_tablet) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+.additional_politic_wrapper {
+  @media screen and (min-width: $min_desktop) {
+    flex: 1;
+    align-items: flex-start;
+  }
+}
+
+.politic_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 40px;
+  @media screen and (min-width: $min_tablet) {
+    margin-bottom: 0px;
+    align-items: flex-end;
+  }
+  @media screen and (min-width: $min_desktop) {
+    width: 275px;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 48px 31px;
+    margin: 0 auto 0 0;
+    height: 100%;
+  }
+}
+
+.politic_link {
+  @include fontRegular(16px, 300, 20px);
+  color: $main_button_color;
+  @media screen and (min-width: $min_desktop) {
+    @include fontRegular(12px, 400, 16px);
+    color: $main_text_color;
+  }
+}
+
+.copyright {
+  display: flex;
+  gap: 4px;
+  @include fontRegular(12px, 400, 16px);
+  color: $main_button_color;
+  @media screen and (min-width: $min_tablet) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.hide_container {
+  @media screen and (min-width: $min_desktop) {
+    display: none;
+  }
+}
+
+.hide_container_small_container {
+  display: none;
+  @media screen and (min-width: $min_desktop) {
+    display: flex;
+  }
+}
