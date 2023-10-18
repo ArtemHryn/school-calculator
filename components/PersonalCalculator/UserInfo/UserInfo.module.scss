@@ -1,0 +1,116 @@
+@import "/styles/main.scss";
+
+.user_info_wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-auto-flow: row;
+  width: 100%;
+  margin-top: 72px;
+  border-radius: 8px;
+  border: 1px solid $border_line;
+
+  @media screen and (min-width: $min_tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @media screen and (min-width: $min_desktop) {
+    flex-wrap: nowrap;
+  }
+}
+
+.name_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+  grid-area: 1 / 1 / 2 / 3;
+  border-radius: 8px;
+  border: 1px solid $border_line;
+  @media screen and (min-width: $min_tablet) {
+    width: 228px;
+    border: none;
+    border-right: 1px solid $border_line;
+  }
+  @media screen and (min-width: $min_desktop) {
+  }
+}
+
+.date_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  grid-area: 2 / 1 / 3 / 2;
+  width: 180px;
+  border-radius: 8px;
+  border: 1px solid $border_line;
+  padding: 16px;
+  @media screen and (min-width: $min_tablet) {
+    border: none;
+    border-right: 1px solid $border_line;
+  }
+  @media screen and (min-width: $min_desktop) {
+  }
+}
+
+.age_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 132px;
+  grid-area: 2 / 2 / 3 / 3;
+  border-radius: 8px;
+  border: 1px solid $border_line;
+  border-left: none;
+  padding: 16px;
+  @media screen and (min-width: $min_tablet) {
+    width: 108px;
+    border: none;
+    border-right: 1px solid $border_line;
+  }
+  @media screen and (min-width: $min_desktop) {
+  }
+}
+
+.button_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-area: 3 / 1 / 4 / 3;
+  border-radius: 8px;
+  border-top: 1px solid $border_line;
+  padding: 16px 0px;
+  @media screen and (min-width: $min_tablet) {
+    width: 100%;
+  }
+  @media screen and (min-width: $min_desktop) {
+    flex-grow: 1;
+    width: auto;
+  }
+}
+
+.box_name {
+  @include fontRegular(16px, 700, 20px);
+}
+
+.box_value {
+  @include fontRegular(16px, 300, 20px);
+}
+
+.link_to_form {
+  display: flex;
+  height: 48px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  @include fontRegular(16px, 400, 20px);
+  color: $main_button_color;
+
+  border-radius: 100px;
+  background: $additional_button_color;
+  @media screen and (min-width: $min_tablet) {
+    width: 332px;
+  }
+  @media screen and (min-width: $min_desktop) {
+  }
+}

@@ -1,0 +1,30 @@
+@import "/styles/main.scss";
+
+.link {
+  padding: 14px 0px;
+  position: relative;
+  @include fontRegular(16px, 400, 20px);
+  transition: color 0.3s ease;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    transform: scaleX(0);
+    transition: transform 250ms ease;
+    background-color: $border_line;
+  }
+  &:hover::after,
+  &:focus::after {
+    transform: scaleX(1);
+  }
+
+  @media screen and (min-width: $min_tablet) {
+  }
+  @media screen and (min-width: $min_desktop) {
+    padding: 8px 0;
+  }
+}

@@ -1,0 +1,84 @@
+@import "/styles/main.scss";
+
+.hero_wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 24px;
+  padding-bottom: 13px;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 150vw;
+    height: 1px;
+    border-radius: 2px;
+    background-color: $border_line;
+    transform: translateX(-20%);
+  }
+
+  @media screen and (min-width: $min_tablet) {
+    flex-direction: row;
+    gap: 42px;
+    align-items: flex-start;
+    padding-bottom: 0px;
+  }
+  @media screen and (min-width: $min_desktop) {
+    gap: 89px;
+  }
+}
+
+.title {
+  @include fontRegular(48px, 700, 52px);
+  @media screen and (min-width: $min_tablet) {
+    @include fontRegular(72px, 700, 76px);
+  }
+  @media screen and (min-width: $min_desktop) {
+    @include fontRegular(104px, 700, 104px);
+  }
+}
+
+.link_wrapper {
+  display: flex;
+  gap: 8px;
+  @media screen and (min-width: $min_tablet) {
+    flex-direction: column;
+    gap: 6px;
+  }
+  @media screen and (min-width: $min_desktop) {
+    flex-direction: row;
+  }
+}
+
+.link_name {
+  @include fontRegular(18px, 400, 23px);
+  width: 180px;
+  @media screen and (min-width: $min_tablet) {
+    width: 104px;
+  }
+  @media screen and (min-width: $min_desktop) {
+  }
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: $main_text_color;
+  @media screen and (min-width: $min_tablet) {
+    width: 64px;
+    height: 64px;
+  }
+  @media screen and (min-width: $min_desktop) {
+  }
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}

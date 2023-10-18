@@ -1,0 +1,82 @@
+@import "/styles/main.scss";
+
+.form {
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 150vw;
+    height: 1px;
+    border-radius: 2px;
+    background-color: $border_line;
+    transform: translateX(-20%);
+    @media screen and (min-width: $min_tablet) {
+      transform: translateX(-40%);
+    }
+  }
+  @media screen and (min-width: $min_tablet) {
+    width: 420px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    border-right: 1px solid $border_line;
+    border-left: 1px solid $border_line;
+  }
+  @media screen and (min-width: $min_desktop) {
+    width: 774px;
+    padding: 71px 227px;
+  }
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  @include fontRegular(16px, 400, 20px);
+  & > span {
+    padding-left: 12px;
+  }
+  @media screen and (min-width: $min_tablet) {
+    width: 100%;
+  }
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  padding: 14px 12px;
+  border-radius: 8px;
+  border: 1px solid $border_line;
+  background-color: transparent;
+  &::placeholder {
+    color: #968c84;
+  }
+}
+
+.submit_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+
+  border-radius: 100px;
+  background: #945215;
+
+  @include fontRegular(16px, 400, 20px);
+  color: $main_button_color;
+
+  @media screen and (min-width: $min_tablet) {
+    width: 100%;
+  }
+}
+
+.error {
+  color: red;
+}
