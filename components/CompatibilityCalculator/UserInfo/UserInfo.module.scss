@@ -1,0 +1,89 @@
+@import "/styles/main.scss";
+
+.user_info_wrapper {
+  margin: 72px 0px;
+  border-radius: 8px;
+  border: 1px solid $border_line;
+  background-color: #edeae1;
+  @media screen and (min-width: $min_tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @media screen and (min-width: $min_desktop) {
+    flex-wrap: nowrap;
+  }
+}
+
+.user_info_item {
+  display: flex;
+}
+
+.info_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 12px 16px;
+  height: 92px;
+  border-radius: 8px;
+}
+
+.date_info_wrapper {
+  width: 200px;
+  border-bottom: 1px solid $border_line;
+  border-right: 1px solid $border_line;
+  @media screen and (min-width: $min_tablet) {
+    border-left: 1px solid $border_line;
+    width: 231px;
+  }
+  @media screen and (min-width: $min_desktop) {
+    border-bottom: none;
+    border-left: none;
+
+    width: 264px;
+  }
+}
+
+.age_info_wrapper {
+  width: 112px;
+  border-bottom: 1px solid $border_line;
+  @media screen and (min-width: $min_tablet) {
+    width: 124px;
+  }
+  @media screen and (min-width: $min_desktop) {
+    width: 142px;
+    border-bottom: none;
+    border-right: 1px solid $border_line;
+  }
+}
+
+.name {
+  @include fontRegular(16px, 700, 20px);
+}
+
+.value {
+  @include fontRegular(16px, 300, 20px);
+}
+
+.button_wrapper {
+  padding: 12px 0;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.link_to_form {
+  display: flex;
+  height: 48px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  @include fontRegular(16px, 400, 20px);
+  color: $main_button_color;
+
+  border-radius: 100px;
+  background: $additional_button_color;
+  @media screen and (min-width: $min_tablet) {
+    width: 332px;
+  }
+}

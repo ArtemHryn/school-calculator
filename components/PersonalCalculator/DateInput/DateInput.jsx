@@ -21,7 +21,11 @@ const DateInput = ({ setDate, setName, setShowMatrix }) => {
   };
 
   return (
-    <form className={styles.form} onSubmit={handleSubmit(onFormSubmit)} id="dateForm">
+    <form
+      className={styles.form}
+      onSubmit={handleSubmit(onFormSubmit)}
+      id="dateForm"
+    >
       <label className={styles.label}>
         <span>Ваше ім’я</span>
         <input
