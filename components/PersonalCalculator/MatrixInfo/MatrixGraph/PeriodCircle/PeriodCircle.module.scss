@@ -1,0 +1,659 @@
+@import "/styles/main.scss";
+
+.element {
+  position: absolute;
+  @include fontRegular(6px, 500, 6px);
+  letter-spacing: -0.3px;
+  @media screen and (min-width: $min_tablet) {
+    @include fontRegular(10px, 500, 10px);
+    letter-spacing: -0.6px;
+  }
+  @media screen and (min-width: $min_desktop) {
+    @include fontRegular(11px, 500, 11px);
+  }
+}
+
+//indexes 0, 8, 16, 24, 32, 40, 48, 56
+.hide {
+  display: none;
+}
+
+.arcane2 {
+  top: 41%;
+  left: 5.7%;
+  @media screen and (min-width: $min_tablet) {
+    left: 12.4%;
+  }
+  @media screen and (min-width: $min_desktop) {
+    left: 11.4%;
+  }
+}
+
+.arcane3 {
+  top: 37.5%;
+  left: 7%;
+  @media screen and (min-width: $min_tablet) {
+    left: 13.3%;
+  }
+  @media screen and (min-width: $min_desktop) {
+    left: 12.4%;
+  }
+}
+
+.arcane4 {
+  top: 34.5%;
+  left: 8%;
+  @media screen and (min-width: $min_tablet) {
+    left: 14.3%;
+  }
+  @media screen and (min-width: $min_desktop) {
+    left: 13.4%;
+  }
+}
+
+.arcane5 {
+  top: 31.2%;
+  left: 9.5%;
+  @media screen and (min-width: $min_tablet) {
+    left: 15.5%;
+  }
+  @media screen and (min-width: $min_desktop) {
+    left: 14.4%;
+  }
+}
+
+.arcane6 {
+  top: 28%;
+  left: 10.5%;
+  @media screen and (min-width: $min_tablet) {
+    left: 16.3%;
+  }
+  @media screen and (min-width: $min_desktop) {
+    left: 15.4%;
+  }
+}
+
+.arcane7 {
+  top: 25%;
+  left: 11.5%;
+  @media screen and (min-width: $min_tablet) {
+    left: 17.3%;
+  }
+  @media screen and (min-width: $min_desktop) {
+    left: 16.4%;
+  }
+}
+
+.arcane8 {
+  top: 22%;
+  left: 12.5%;
+  @media screen and (min-width: $min_tablet) {
+    left: 18.3%;
+  }
+  @media screen and (min-width: $min_desktop) {
+    left: 17.4%;
+  }
+}
+
+.arcane10 {
+  top: 11.2%;
+  left: 23.5%;
+  @media screen and (min-width: $min_tablet) {
+    left: 27.3%;
+  }
+  @media screen and (min-width: $min_desktop) {
+    left: 26.7%;
+  }
+}
+
+.arcane11 {
+  top: 9.8%;
+  left: 26.4%;
+  @media screen and (min-width: $min_tablet) {
+    left: 29.7%;
+  }
+  @media screen and (min-width: $min_desktop) {
+    left: 29.2%;
+  }
+}
+
+.arcane12 {
+  top: 8.6%;
+  left: 29.4%;
+  @media screen and (min-width: $min_tablet) {
+    left: 32.2%;
+  }
+  @media screen and (min-width: $min_desktop) {
+    left: 31.8%;
+  }
+}
+
+.arcane13 {
+  top: 6.8%;
+  left: 32.6%;
+  @media screen and (min-width: $min_tablet) {
+    left: 34.8%;
+    top: 7%;
+  }
+  @media screen and (min-width: $min_desktop) {
+    left: 34.4%;
+  }
+}
+.arcane14 {
+  top: 5.8%;
+  left: 36.2%;
+  @media screen and (min-width: $min_tablet) {
+    left: 37.8%;
+  }
+  @media screen and (min-width: $min_desktop) {
+    left: 37.4%;
+  }
+}
+
+.arcane15 {
+  top: 4.5%;
+  left: 39.2%;
+  @media screen and (min-width: $min_tablet) {
+    left: 40.5%;
+  }
+  @media screen and (min-width: $min_desktop) {
+    left: 40.1%;
+  }
+}
+
+.arcane16 {
+  top: 3%;
+  left: 41.8%;
+  @media screen and (min-width: $min_tablet) {
+    left: 42.5%;
+  }
+  @media screen and (min-width: $min_desktop) {
+    left: 42.1%;
+  }
+}
+
+.arcane18 {
+  top: 3.4%;
+  right: 41.7%;
+  @media screen and (min-width: $min_tablet) {
+    right: 44%;
+  }
+  @media screen and (min-width: $min_desktop) {
+    right: 43.6%;
+  }
+}
+
+.arcane19 {
+  top: 4.4%;
+  right: 39.3%;
+  @media screen and (min-width: $min_tablet) {
+    right: 41.5%;
+    top: 4.7%;
+  }
+  @media screen and (min-width: $min_desktop) {
+    right: 41.4%;
+  }
+}
+
+.arcane20 {
+  top: 5.9%;
+  right: 36.6%;
+  @media screen and (min-width: $min_tablet) {
+    right: 39.4%;
+  }
+  @media screen and (min-width: $min_desktop) {
+    right: 39.2%;
+  }
+}
+
+.arcane21 {
+  top: 6.9%;
+  right: 33.4%;
+  @media screen and (min-width: $min_tablet) {
+    right: 36.5%;
+    top: 7%;
+  }
+  @media screen and (min-width: $min_desktop) {
+    right: 36.2%;
+  }
+}
+
+.arcane22 {
+  top: 8.4%;
+  right: 29.8%;
+  @media screen and (min-width: $min_tablet) {
+    right: 33.4%;
+    top: 8.6%;
+  }
+  @media screen and (min-width: $min_desktop) {
+    right: 33.2%;
+  }
+}
+
+.arcane23 {
+  top: 10%;
+  right: 27%;
+  @media screen and (min-width: $min_tablet) {
+    right: 31.4%;
+  }
+  @media screen and (min-width: $min_desktop) {
+    right: 31.2%;
+  }
+}
+
+.arcane24 {
+  top: 11.4%;
+  right: 23.8%;
+  @media screen and (min-width: $min_tablet) {
+    right: 28.9%;
+  }
+  @media screen and (min-width: $min_desktop) {
+    right: 28.2%;
+  }
+}
+
+.arcane26 {
+  top: 21.6%;
+  right: 13.6%;
+  @media screen and (min-width: $min_tablet) {
+    right: 20.3%;
+  }
+  @media screen and (min-width: $min_desktop) {
+    right: 19.4%;
+  }
+}
+
+.arcane27 {
+  top: 24.6%;
+  right: 12.6%;
+  @media screen and (min-width: $min_tablet) {
+    right: 19.3%;
+  }
+  @media screen and (min-width: $min_desktop) {
+    right: 18.4%;
+  }
+}
+
+.arcane28 {
+  top: 28.3%;
+  right: 11.5%;
+  @media screen and (min-width: $min_tablet) {
+    right: 18.2%;
+    top: 28.2%;
+  }
+  @media screen and (min-width: $min_desktop) {
+    right: 17.5%;
+  }
+}
+
+.arcane29 {
+  top: 31.6%;
+  right: 9.5%;
+  @media screen and (min-width: $min_tablet) {
+    right: 16.8%;
+  }
+  @media screen and (min-width: $min_desktop) {
+    right: 15.9%;
+  }
+}
+
+.arcane30 {
+  top: 35.4%;
+  right: 8.4%;
+  @media screen and (min-width: $min_tablet) {
+    right: 15.8%;
+  }
+  @media screen and (min-width: $min_desktop) {
+    right: 14.9%;
+  }
+}
+
+.arcane31 {
+  top: 38.4%;
+  right: 7.4%;
+  @media screen and (min-width: $min_tablet) {
+    right: 15%;
+  }
+  @media screen and (min-width: $min_desktop) {
+    right: 14%;
+  }
+}
+
+.arcane32 {
+  top: 41.8%;
+  right: 6.2%;
+  @media screen and (min-width: $min_tablet) {
+    right: 13.9%;
+  }
+  @media screen and (min-width: $min_desktop) {
+    right: 13%;
+  }
+}
+
+.arcane34 {
+  bottom: 42.3%;
+  right: 5.8%;
+  @media screen and (min-width: $min_tablet) {
+    right: 13.7%;
+    bottom: 42.4%;
+  }
+  @media screen and (min-width: $min_desktop) {
+    right: 12.4%;
+  }
+}
+
+.arcane35 {
+  bottom: 39.2%;
+  right: 6.8%;
+  @media screen and (min-width: $min_tablet) {
+    right: 14.7%;
+  }
+  @media screen and (min-width: $min_desktop) {
+    right: 13.7%;
+  }
+}
+
+.arcane36 {
+  bottom: 36.2%;
+  right: 7.8%;
+  @media screen and (min-width: $min_tablet) {
+    right: 15.6%;
+  }
+  @media screen and (min-width: $min_desktop) {
+    right: 14.6%;
+  }
+}
+
+.arcane37 {
+  bottom: 33%;
+  right: 9%;
+  @media screen and (min-width: $min_tablet) {
+    right: 16.4%;
+  }
+  @media screen and (min-width: $min_desktop) {
+    right: 15.8%;
+  }
+}
+
+.arcane38 {
+  bottom: 29.3%;
+  right: 10%;
+  @media screen and (min-width: $min_tablet) {
+    right: 17.8%;
+  }
+  @media screen and (min-width: $min_desktop) {
+    right: 16.5%;
+  }
+}
+
+.arcane39 {
+  bottom: 25.9%;
+  right: 11.8%;
+  @media screen and (min-width: $min_tablet) {
+    right: 18.8%;
+  }
+  @media screen and (min-width: $min_desktop) {
+    right: 17.9%;
+  }
+}
+
+.arcane40 {
+  bottom: 22.3%;
+  right: 13%;
+  @media screen and (min-width: $min_tablet) {
+    right: 20%;
+  }
+  @media screen and (min-width: $min_desktop) {
+    right: 19%;
+  }
+}
+
+.arcane42 {
+  bottom: 11.1%;
+  right: 23%;
+  @media screen and (min-width: $min_tablet) {
+    right: 28%;
+  }
+  @media screen and (min-width: $min_desktop) {
+    right: 27.2%;
+    bottom: 11.3%;
+  }
+}
+
+.arcane43 {
+  bottom: 9.8%;
+  right: 26.2%;
+  @media screen and (min-width: $min_tablet) {
+    right: 30.5%;
+  }
+  @media screen and (min-width: $min_desktop) {
+    right: 29.8%;
+    bottom: 10%;
+  }
+}
+
+.arcane44 {
+  bottom: 8.4%;
+  right: 28.4%;
+  @media screen and (min-width: $min_tablet) {
+    right: 33.3%;
+    bottom: 8.6%;
+  }
+  @media screen and (min-width: $min_desktop) {
+    right: 32.9%;
+    bottom: 8.8%;
+  }
+}
+
+.arcane45 {
+  bottom: 7%;
+  right: 31.6%;
+  @media screen and (min-width: $min_tablet) {
+    right: 35.3%;
+  }
+  @media screen and (min-width: $min_desktop) {
+    right: 34.9%;
+    bottom: 7.3%;
+  }
+}
+
+.arcane46 {
+  bottom: 5.6%;
+  right: 35.2%;
+  @media screen and (min-width: $min_tablet) {
+    right: 38.3%;
+    bottom: 6%;
+  }
+  @media screen and (min-width: $min_desktop) {
+    right: 38.2%;
+    bottom: 6.1%;
+  }
+}
+
+.arcane47 {
+  bottom: 4.3%;
+  right: 37.6%;
+  @media screen and (min-width: $min_tablet) {
+    right: 40.3%;
+    bottom: 4.8%;
+  }
+  @media screen and (min-width: $min_desktop) {
+    right: 40.1%;
+    bottom: 4.6%;
+  }
+}
+
+.arcane48 {
+  bottom: 2.8%;
+  right: 41.8%;
+  @media screen and (min-width: $min_tablet) {
+    right: 43.8%;
+    bottom: 3%;
+  }
+  @media screen and (min-width: $min_desktop) {
+    right: 43.5%;
+    bottom: 3.2%;
+  }
+}
+
+.arcane50 {
+  bottom: 2.8%;
+  left: 41%;
+  @media screen and (min-width: $min_tablet) {
+    left: 42%;
+    bottom: 3.2%;
+  }
+  @media screen and (min-width: $min_desktop) {
+    right: 41.9%;
+  }
+}
+
+.arcane51 {
+  bottom: 4.2%;
+  left: 37.6%;
+  @media screen and (min-width: $min_tablet) {
+    left: 39%;
+    bottom: 4.6%;
+  }
+}
+
+.arcane52 {
+  bottom: 5.8%;
+  left: 34%;
+  @media screen and (min-width: $min_tablet) {
+    left: 36.6%;
+    bottom: 6%;
+  }
+}
+
+.arcane53 {
+  bottom: 6.8%;
+  left: 31%;
+  @media screen and (min-width: $min_tablet) {
+    left: 33.6%;
+    bottom: 7%;
+  }
+  @media screen and (min-width: $min_desktop) {
+    left: 33.3%;
+  }
+}
+
+.arcane54 {
+  bottom: 8%;
+  left: 28%;
+  @media screen and (min-width: $min_tablet) {
+    left: 31.6%;
+    bottom: 8.6%;
+  }
+  @media screen and (min-width: $min_desktop) {
+    left: 31.1%;
+  }
+}
+
+.arcane55 {
+  bottom: 9.5%;
+  left: 25.4%;
+  @media screen and (min-width: $min_tablet) {
+    left: 28.6%;
+    bottom: 10%;
+  }
+  @media screen and (min-width: $min_desktop) {
+    left: 28.2%;
+  }
+}
+
+.arcane56 {
+  bottom: 10.8%;
+  left: 21.6%;
+  @media screen and (min-width: $min_tablet) {
+    left: 26%;
+    bottom: 11.5%;
+  }
+  @media screen and (min-width: $min_desktop) {
+    left: 25.5%;
+  }
+}
+
+.arcane58 {
+  bottom: 22.4%;
+  left: 12.6%;
+  @media screen and (min-width: $min_tablet) {
+    left: 18.2%;
+    bottom: 21.7%;
+  }
+  @media screen and (min-width: $min_desktop) {
+    left: 17.5%;
+  }
+}
+
+.arcane59 {
+  bottom: 25.7%;
+  left: 11.3%;
+  @media screen and (min-width: $min_tablet) {
+    left: 17.2%;
+    bottom: 25.3%;
+  }
+  @media screen and (min-width: $min_desktop) {
+    left: 16.5%;
+  }
+}
+
+.arcane60 {
+  bottom: 29%;
+  left: 9.8%;
+  @media screen and (min-width: $min_tablet) {
+    left: 16%;
+    bottom: 28.5%;
+  }
+  @media screen and (min-width: $min_desktop) {
+    left: 15.4%;
+  }
+}
+
+.arcane61 {
+  bottom: 32.5%;
+  left: 8.6%;
+  @media screen and (min-width: $min_tablet) {
+    left: 15%;
+    bottom: 32%;
+  }
+  @media screen and (min-width: $min_desktop) {
+    left: 14.2%;
+  }
+}
+
+.arcane62 {
+  bottom: 36%;
+  left: 7%;
+  @media screen and (min-width: $min_tablet) {
+    left: 13.7%;
+    bottom: 35.8%;
+  }
+  @media screen and (min-width: $min_desktop) {
+    left: 12.7%;
+  }
+}
+
+.arcane63 {
+  bottom: 39%;
+  left: 6%;
+  @media screen and (min-width: $min_tablet) {
+    left: 12.9%;
+    bottom: 38.8%;
+  }
+  @media screen and (min-width: $min_desktop) {
+    left: 11.9%;
+  }
+}
+
+.arcane64 {
+  bottom: 42%;
+  left: 5%;
+  @media screen and (min-width: $min_tablet) {
+    left: 11.9%;
+    bottom: 41.8%;
+  }
+  @media screen and (min-width: $min_desktop) {
+    left: 10.9%;
+  }
+}

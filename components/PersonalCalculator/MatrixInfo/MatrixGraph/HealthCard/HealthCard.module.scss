@@ -1,1 +1,86 @@
-@import '/styles/main.scss';
+@import "/styles/main.scss";
+
+.title {
+  @include fontRegular(28px, 700, 32px);
+  text-align: justify;
+  margin-bottom: 16px;
+  @media screen and (min-width: $min_tablet) {
+    @include fontRegular(32px, 700, 40px);
+  }
+  @media screen and (min-width: $min_desktop) {
+  }
+}
+
+.list_item {
+  display: flex;
+  border-bottom: 1px solid #968c84;
+}
+
+.chakras_name_wrapper {
+  display: flex;
+  gap: 8px;
+  flex-grow: 1;
+  align-items: center;
+}
+
+.chakra {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  width: 56px;
+  border-right: 1px solid #968c84;
+
+  @include fontRegular(12px, 400, 16px);
+
+  @media screen and (min-width: $min_tablet) {
+    @include fontRegular(16px, 400, 24px);
+    width: 80px;
+    height: 56px;
+  }
+  @media screen and (min-width: $min_desktop) {
+  }
+  &_names {
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: flex-start;
+  }
+  &_title {
+    flex-grow: 1;
+    justify-content: flex-start;
+    gap: 8px;
+  }
+  &_total {
+    color: #f0eee8;
+    background-color: #3c3a38;
+    border: none;
+    border-radius: 0px 0px 8px 8px;
+  }
+}
+
+.chakra_desc {
+  @include fontRegular(12px, 300, 14px);
+  letter-spacing: -0.3px;
+  color: #504e4c;
+}
+
+.chakra_circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 12px;
+  height: 60px;
+  border-radius: 50%;
+  @include fontRegular(12px, 400, 16px);
+
+  @media screen and (min-width: $min_tablet) {
+    width: 16px;
+    height: 56px;
+
+    @include fontRegular(16px, 400, 24px);
+  }
+  @media screen and (min-width: $min_desktop) {
+  }
+}
+
+//total

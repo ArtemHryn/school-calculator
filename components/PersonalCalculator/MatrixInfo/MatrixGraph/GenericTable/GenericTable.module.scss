@@ -1,0 +1,36 @@
+@import "/styles/main.scss";
+
+.list_item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 8px;
+  border-radius: 8px;
+  border-right: 0.5px solid $border_line;
+  border-bottom: 0.5px solid $border_line;
+  @media screen and (min-width: $min_tablet) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  @media screen and (min-width: $min_desktop) {
+  }
+}
+
+.list_item_title {
+  @include fontRegular(16px, 300, 20px);
+}
+
+.arcanes_wrapper {
+  display: flex;
+  gap: 16px;
+}
+
+.arcane {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid $border_line;
+  border-radius: 50%;
+}

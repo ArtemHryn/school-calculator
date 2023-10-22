@@ -68,3 +68,230 @@ export const personalCalculator = (info) => {
 
   return date;
 };
+
+const chakras = [
+  {
+    name: "Сахасрара-чакра",
+    desc: "Місія",
+    color: "linear-gradient(to bottom, #BD6ED9CC, #CF9BDECC)",
+  },
+  {
+    name: "Аджна-чакра",
+    desc: "Доля, егрегори",
+    color:
+      "linear-gradient(180deg, rgba(79,130,232,1) 16%, rgba(156,168,215,1) 74%)",
+  },
+  {
+    name: "Вішудха-чакра",
+    desc: "Самосприйняття, самовираження",
+    color:
+      "linear-gradient(180deg, rgba(97,199,251,1) 53%, rgba(168,227,254,1) 85%)",
+  },
+  {
+    name: "Анахата-чакра",
+    desc: "Відносини, картина світу",
+    color:
+      "linear-gradient(180deg, rgba(188,225,177,1) 0%, rgba(106,146,88,1) 44%)",
+  },
+  {
+    name: "Маніпура-чакра",
+    desc: "Статус, партнерство, місце в соціумі, гроші",
+    color:
+      "linear-gradient(180deg, rgba(255,251,94,1) 79%, rgba(255,255,255,1) 100%)",
+  },
+  {
+    name: "Свадхістана-чакра",
+    desc: "Радість, задоволення",
+    color:
+      "linear-gradient(180deg, rgba(242,212,188,1) 4%, rgba(251,175,112,1) 49%, rgba(255,159,82,1) 75%, rgba(255,146,58,1) 100%)",
+  },
+  {
+    name: "Муладхара-чакра",
+    desc: "Тіло, матерія",
+    color:
+      "linear-gradient(180deg, rgba(250,85,79,1) 0%, rgba(247,110,104,1) 27%, rgba(241,141,135,1) 58%)",
+  },
+];
+
+export const personalTables = (info) => {
+  const {
+    day,
+    left2,
+    left3,
+    innerLeft,
+    center,
+    right3,
+    year,
+    month,
+    top2,
+    top3,
+    innerTop,
+    bottom3,
+    bottom1,
+    topLeft1,
+    bottomRight1,
+    topRight1,
+    bottomLeft1,
+  } = info;
+
+  //здоров'я
+  const tables = {
+    healthMap: [
+      { column1: day, column2: month },
+      { column1: left2, column2: top2 },
+      { column1: left3, column2: top3 },
+      { column1: innerLeft, column2: innerTop },
+      { column1: center, column2: center },
+      { column1: right3, column2: bottom3 },
+      { column1: year, column2: bottom1 },
+    ],
+    total: {},
+  };
+
+  tables.healthMap.forEach(
+    (el) => (el.column3 = checkNum(el.column1, el.column2))
+  );
+  tables.total.column1 = checkNum(
+    tables.healthMap.reduce((acc, el) => acc + el.column1, 0)
+  );
+  tables.total.column2 = checkNum(
+    tables.healthMap.reduce((acc, el) => acc + el.column2, 0)
+  );
+  tables.total.column3 = checkNum(
+    tables.healthMap.reduce((acc, el) => acc + el.column3, 0)
+  );
+
+  tables.healthMap.forEach((el, index) => (el.chakras = chakras[index]));
+
+  //призначення
+  const purpose = {
+    personal: { point1: checkNum(month, bottom1), point2: checkNum(day, year) },
+    social: {
+      point1: checkNum(topLeft1, bottomRight1),
+      point2: checkNum(topRight1, bottomLeft1),
+    },
+    total: {},
+  };
+
+  purpose.personal.result = checkNum(
+    purpose.personal.point1,
+    purpose.personal.point2
+  );
+  purpose.social.result = checkNum(
+    purpose.social.point1,
+    purpose.social.point2
+  );
+  purpose.total.spirit = checkNum(
+    purpose.personal.result,
+    purpose.social.result
+  );
+  purpose.total.planetary = checkNum(
+    purpose.social.result,
+    purpose.total.spirit
+  );
+  return { tables, purpose };
+};
+
+export const genericPrograms = (info) => {
+  const { topLeft1, bottomRight1, topRight1, bottomLeft1, center } = info;
+  const data = {
+    father: [topLeft1, bottomRight1, checkNum(topLeft1, bottomRight1)],
+    mother: [topRight1, bottomLeft1, checkNum(topRight1, bottomLeft1)],
+  };
+
+  data.genericPower = checkNum(topLeft1, topRight1, bottomLeft1, bottomRight1);
+  data.internal = [
+    center,
+    data.genericPower,
+    checkNum(center, data.genericPower),
+  ];
+
+  return data;
+};
+
+//період
+export const getPeriod = (info) => {
+  const {
+    day,
+    topLeft1,
+    month,
+    topRight1,
+    year,
+    bottomRight1,
+    bottom1,
+    bottomLeft1,
+  } = info;
+  const elements = [];
+  const arcanes = [
+    day,
+    topLeft1,
+    month,
+    topRight1,
+    year,
+    bottomRight1,
+    bottom1,
+    bottomLeft1,
+  ];
+  let arcaneIndex = 0;
+  for (let i = 0; i < 80; i += 1.25) {
+    if (i === 0 || i % 10 === 0) {
+      elements.push({ age: i, arcane: arcanes[arcaneIndex] });
+      arcaneIndex++;
+      continue;
+    }
+    elements.push({ age: i });
+  }
+
+  elements.forEach((element, index, array) => {
+    try {
+      if (index === 60) {
+        element.arcane = checkNum(array[index - 4].arcane, array[0].arcane);
+        return;
+      }
+      if (element.age % 5 === 0 && element.age % 10 !== 0) {
+        element.arcane = checkNum(
+          array[index - 4].arcane,
+          array[index + 4].arcane
+        );
+      }
+    } catch (error) {
+      console.log(index);
+    }
+  });
+
+  elements.forEach((element, index, array) => {
+    try {
+      if (index === 62) {
+        element.arcane = checkNum(array[index - 2].arcane, array[0].arcane);
+        return;
+      }
+      if (element.age % 2.5 === 0 && element.age % 5 !== 0) {
+        element.arcane = checkNum(
+          array[index - 2].arcane,
+          array[index + 2].arcane
+        );
+      }
+    } catch (error) {
+      console.log(index);
+    }
+  });
+
+  elements.forEach((element, index, array) => {
+    try {
+      if (index === 63) {
+        element.arcane = checkNum(array[index - 1].arcane + array[0].arcane);
+        return;
+      }
+      if (element.age % 1.25 === 0 && element.age % 2.5 !== 0) {
+        element.arcane = checkNum(
+          array[index - 1].arcane + array[index + 1].arcane
+        );
+      }
+    } catch (error) {
+      console.log(index);
+    }
+  });
+
+  elements.forEach((el, index) => (el.style = `arcane${index + 1}`));
+  return elements;
+};
