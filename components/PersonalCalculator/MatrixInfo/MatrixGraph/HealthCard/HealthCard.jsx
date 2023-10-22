@@ -3,6 +3,7 @@ import styles from "./HealthCard.module.scss";
 
 const HealthCard = ({ table }) => {
   if (!table) return null;
+  console.log(table);
   return (
     <div>
       <h2 className={`${styles.title} ${kyivtype.className}`}>
@@ -48,6 +49,29 @@ const HealthCard = ({ table }) => {
             </p>
           </li>
         ))}
+        <li className={styles.list_item}>
+          <span
+            className={styles.chakra_circle}
+            style={{ backgroundColor: "#3C3A38" }}
+          />
+          <p
+            className={`${styles.chakra} ${styles.chakra_title} ${styles.chakra_sum}`}
+          >
+            Сума
+          </p>
+
+          <p className={`${styles.chakra} ${styles.chakra_sum}`}>
+            {table.sum.column1}
+          </p>
+          <p className={`${styles.chakra} ${styles.chakra_sum}`}>
+            {table.sum.column2}
+          </p>
+          <p
+            className={`${styles.chakra} ${styles.chakra_sum}`}
+          >
+            {table.sum.column3}
+          </p>
+        </li>
         <li className={styles.list_item} style={{ border: "none" }}>
           <span
             className={styles.chakra_circle}
@@ -56,7 +80,7 @@ const HealthCard = ({ table }) => {
           <p
             className={`${styles.chakra} ${styles.chakra_title} ${styles.chakra_total}`}
           >
-            Сума
+            Підсумок
           </p>
 
           <p className={`${styles.chakra} ${styles.chakra_total}`}>

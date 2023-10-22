@@ -146,20 +146,29 @@ export const personalTables = (info) => {
       { column1: year, column2: bottom1 },
     ],
     total: {},
+    sum: {},
   };
 
   tables.healthMap.forEach(
     (el) => (el.column3 = checkNum(el.column1, el.column2))
   );
-  tables.total.column1 = checkNum(
-    tables.healthMap.reduce((acc, el) => acc + el.column1, 0)
+
+  tables.sum.column1 = tables.healthMap.reduce(
+    (acc, el) => acc + el.column1,
+    0
   );
-  tables.total.column2 = checkNum(
-    tables.healthMap.reduce((acc, el) => acc + el.column2, 0)
+
+  tables.sum.column2 = tables.healthMap.reduce(
+    (acc, el) => acc + el.column2,
+    0
   );
-  tables.total.column3 = checkNum(
-    tables.healthMap.reduce((acc, el) => acc + el.column3, 0)
+  tables.sum.column3 = tables.healthMap.reduce(
+    (acc, el) => acc + el.column3,
+    0
   );
+  tables.total.column1 = checkNum(tables.sum.column1);
+  tables.total.column2 = checkNum(tables.sum.column2);
+  tables.total.column3 = checkNum(tables.sum.column3);
 
   tables.healthMap.forEach((el, index) => (el.chakras = chakras[index]));
 

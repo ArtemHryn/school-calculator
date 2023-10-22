@@ -46,15 +46,15 @@ const PurposeTable = ({ table }) => {
             <div className={styles.internal_wrapper}>
               <div className={styles.value_wrapper}>
                 <p className={styles.arcane_name}>Ч:</p>
-                <p className={styles.arcane}>{table.personal.point1}</p>
+                <p className={styles.arcane}>{table.social.point1}</p>
               </div>
               <div className={styles.value_wrapper}>
                 <p className={styles.arcane_name}>Ж:</p>
-                <p className={styles.arcane}>{table.personal.point2}</p>
+                <p className={styles.arcane}>{table.social.point2}</p>
               </div>
             </div>
             <Connector styled={styles.connector} />
-            <p className={styles.arcane}>{table.personal.result}</p>
+            <p className={styles.arcane}>{table.social.result}</p>
           </div>
         </li>
         <li className={`${styles.list_item} ${styles.list_item_result}`}>
