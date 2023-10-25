@@ -1,0 +1,105 @@
+@import "/styles/main.scss";
+
+.list {
+  @media screen and (min-width: $min_tablet) {
+    display: flex;
+  }
+  @media screen and (min-width: $min_desktop) {
+    flex-direction: column;
+    width: 405px;
+  }
+}
+
+.list_item {
+  padding: 16px;
+  border: 1px solid $border_line;
+  border-radius: 8px;
+  &:not(:first-child) {
+    border-top: none;
+  }
+
+  @media screen and (min-width: $min_tablet) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: calc(100% / 2);
+    height: 214px;
+    border: 1px solid $border_line;
+    &:not(:first-child) {
+      border: 1px solid $border_line;
+    }
+    &_result {
+      justify-content: flex-start;
+      gap: 32px;
+    }
+  }
+  @media screen and (min-width: $min_tablet) {
+    height: 232px;
+    @media screen and (max-width: 1365.9px) {
+      &:not(:first-child) {
+        border-left: none;
+      }
+    }
+  }
+  @media screen and (min-width: $min_desktop) {
+    width: 100%;
+    height: 212px;
+    &:not(:first-child) {
+      border-top: none;
+    }
+  }
+}
+
+.list_item_title {
+  @include fontRegular(16px, 700, 20px);
+  margin-bottom: 8px;
+}
+
+.list_item_desc {
+  @include fontRegular(16px, 300, 20px);
+  margin-bottom: 16px;
+}
+
+//purpose arcanes
+
+.purpose_wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.internal_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.value_wrapper {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: flex-end;
+  max-width: 92px;
+}
+
+.arcane_name {
+  @include fontRegular(16px, 300, 20px);
+}
+
+.arcane {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+
+  @include fontRegular(20px, 600, 28px);
+  letter-spacing: -2px;
+
+  border: 1px solid $border_line;
+  border-radius: 50%;
+}
+
+.connector {
+  width: 47px;
+  height: 46px;
+}

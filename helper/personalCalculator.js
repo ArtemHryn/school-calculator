@@ -12,9 +12,8 @@ export function checkNum(...nums) {
   return +result;
 }
 
-export const personalCalculator = (info) => {
+export const personalCalculator = (info, isCalcTopPoints = true) => {
   const date = { ...info };
-
   //основні точки(особистий квадрат)
   Object.keys(date).forEach((el) => {
     if (el === "year") {
@@ -23,15 +22,16 @@ export const personalCalculator = (info) => {
     }
     date[el] = checkNum(date[el]);
   });
+  if (isCalcTopPoints) {
+    date.bottom1 = checkNum(date.day, date.month, date.year);
+    date.center = checkNum(date.day, date.month, date.year, date.bottom1);
 
-  date.bottom1 = checkNum(date.day, date.month, date.year);
-  date.center = checkNum(date.day, date.month, date.year, date.bottom1);
-
-  //самі верхні точки під 45 градусів(родовий квадрат)
-  date.topLeft1 = checkNum(date.day, date.month);
-  date.topRight1 = checkNum(date.month, date.year);
-  date.bottomRight1 = checkNum(date.bottom1, date.year);
-  date.bottomLeft1 = checkNum(date.bottom1, date.day);
+    //самі верхні точки під 45 градусів(родовий квадрат)
+    date.topLeft1 = checkNum(date.day, date.month);
+    date.topRight1 = checkNum(date.month, date.year);
+    date.bottomRight1 = checkNum(date.bottom1, date.year);
+    date.bottomLeft1 = checkNum(date.bottom1, date.day);
+  }
 
   //внутрішній квадрат
   date.left3 = checkNum(date.day, date.center);

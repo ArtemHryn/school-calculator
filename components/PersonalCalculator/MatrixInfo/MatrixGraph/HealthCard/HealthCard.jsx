@@ -3,7 +3,6 @@ import styles from "./HealthCard.module.scss";
 
 const HealthCard = ({ table }) => {
   if (!table) return null;
-  console.log(table);
   return (
     <div>
       <h2 className={`${styles.title} ${kyivtype.className}`}>

@@ -7,7 +7,6 @@ const initialState = { date: "" };
 
 const DataInput = ({ setDate, setShowMatrix }) => {
   const {
-    register,
     handleSubmit,
     control,
     formState: { errors },

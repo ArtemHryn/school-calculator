@@ -3,7 +3,7 @@ import Container from "@components/Container/Container";
 import Hero from "@components/Hero/Hero";
 
 export const metadata = {
-  title: "Калькулятор сумусності",
+  title: "Калькулятор сумісності",
   description: "Калькулятор для розрахунку матриці сумісності",
   viewport:
     "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no",

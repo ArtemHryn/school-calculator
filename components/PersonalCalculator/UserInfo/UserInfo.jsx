@@ -21,8 +21,13 @@ const UserInfo = ({ name, date }) => {
     setAge(result);
   }, [date.day, date.month, date.year]);
 
+  useEffect(() => {
+    const section = document.getElementById("matrixData");
+    section.scrollIntoView({ behavior: "smooth" });
+  });
+
   return (
-    <div className={styles.user_info_wrapper}>
+    <div className={styles.user_info_wrapper} id="matrixData">
       {name && (
         <div className={styles.name_wrapper}>
           <p className={`${styles.box_name} ${kyivtype.className}`}>Ім’я</p>

@@ -1,1 +1,9 @@
 @import "/styles/main.scss";
+
+.matrix_box {
+  @media screen and (min-width: $min_desktop) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+}
