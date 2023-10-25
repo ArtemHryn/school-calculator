@@ -1,0 +1,49 @@
+@import "/styles/main.scss";
+
+.main_stain {
+  position: absolute;
+  fill: rgba(248, 129, 18, 0.3);
+  filter: blur(60px);
+  pointer-events: none;
+  width: 644px;
+  height: 720px;
+  top: -50px;
+  right: 0%;
+  z-index: 40;
+  @media screen and (min-width: $min_tablet) {
+    width: 100vw;
+    height: 935px;
+    right: 10%;
+  }
+  @media screen and (min-width: $min_desktop) {
+    width: 944px;
+    height: 720px;
+    right: 30%;
+    top: 20px;
+  }
+}
+
+.input_stain {
+  position: absolute;
+  pointer-events: none;
+  z-index: 10;
+  fill: rgba(11, 87, 14, 0.1);
+  filter: blur(19.5px);
+  width: 505px;
+  height: 485px;
+  top: 80px;
+  right: 0%;
+  @media screen and (min-width: $min_tablet) {
+    width: 60vw;
+    height: 435px;
+    right: 0%;
+    top: 120px;
+  }
+  @media screen and (min-width: $min_desktop) {
+    top: -20px;
+    right: -10%;
+    width: 110vw;
+    height: 595px;
+    filter: blur(0px);
+  }
+}

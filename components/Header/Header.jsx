@@ -5,6 +5,7 @@ import { kyivtype } from "@app/layout";
 import styles from "./Header.module.scss";
 import Link from "next/link";
 import Nav from "@components/MainPage/Nav";
+import HeroMainStain from "@components/Stains/HeroMainStain";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,6 +36,7 @@ const Header = () => {
         <nav className={`${styles.mob_nav} ${isOpen ? styles.open_modal : ""}`}>
           <Nav setIsOpen={setIsOpen} />
         </nav>
+        <HeroMainStain />
       </div>
     </header>
   );

@@ -1,6 +1,7 @@
 import { useRouter } from "next/navigation";
 
 import styles from "./Nav.module.scss";
+import Link from "next/link";
 
 const Nav = ({ setIsOpen }) => {
   const route = useRouter();
@@ -13,12 +14,13 @@ const Nav = ({ setIsOpen }) => {
   return (
     <>
       {" "}
-      <button
+      <Link
         className={styles.link}
-        onClick={() => onRedirect("https://oksanailchyshyn.com/")}
+        href={"https://oksanailchyshyn.com/"}
+        target="_blank"
       >
         Головна сторінка
-      </button>
+      </Link>
       <button
         className={styles.link}
         onClick={() => onRedirect("/personal-calculator")}
