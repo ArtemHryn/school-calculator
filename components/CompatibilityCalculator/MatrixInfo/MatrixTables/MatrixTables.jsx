@@ -5,7 +5,6 @@ import { kyivtype } from "@app/layout";
 
 const MatrixTables = ({ purpose }) => {
   if (!purpose) return null;
-  console.log(purpose);
   return (
     <ul className={styles.list}>
       <li className={styles.list_item}>

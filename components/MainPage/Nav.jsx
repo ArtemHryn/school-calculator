@@ -8,7 +8,7 @@ const Nav = ({ setIsOpen }) => {
 
   const onRedirect = (link) => {
     route.push(link);
-    setIsOpen(false);
+    setIsOpen && setIsOpen(false);
   };
 
   return (

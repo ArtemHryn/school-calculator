@@ -23,6 +23,9 @@ const UserInfo = ({ name, date }) => {
 
   useEffect(() => {
     const section = document.getElementById("matrixData");
+    if (!section) {
+      return;
+    }
     section.scrollIntoView({ behavior: "smooth" });
   });
 

@@ -27,6 +27,9 @@ const UserInfo = ({ partners }) => {
 
   useEffect(() => {
     const section = document.getElementById("partnersMatrix");
+    if (!section) {
+      return;
+    }
     section.scrollIntoView({ behavior: "smooth" });
   });
 
